@@ -1,0 +1,62 @@
+Project SVO ini menggunakan bahasa C++
+Library computer vision yang dipakai adalah OpenCV dengan versi 3.0.0
+Dengan GUI Toolkit yang dipakai adalah FLTK
+
+Untuk pengembangan software dengan toolkit GUI yang sama, maka dibutuhkan development kit sebagai berikut:
+- tdm-gcc versi 5.1.0-3 (atau MinGW equivalent dengan gcc versi 5.1)
+- fltk-1.3.0 (silahkan compile dan install sendiri pada MinGW)
+- opencv-3.0.0 (silahkan untuk compile dan install sendiri)
+- glew
+
+==================================================================================================================
+
+Untuk melakukan kompilasi software, silahkan gunakan MinGW command prompt atau MSYS
+
+1. Perintah untuk build software (dengan console window):
+	`make` atau `make cli`
+2. Perintah untuk membersihkan object files berserta executable:
+	`make clean`
+3. Perintah untuk membangun software tanpa console window:
+	`make gui`
+
+Untuk memodifikasi tampilan GUI (pastikan aplikasi FLUID telah terinstall pada MinGW anda):
+	`make fluid`
+
+Untuk proses editing source code pada project ini, anda memerlukan software geany.
+Setelah memiliki software tersebut, silahkan ketik perintah berikut pada MinGW command prompt:
+	`make edit`
+
+==================================================================================================================
+
+Pada software dibagi menjadi beberapa source dan header files berbeda.
+
+main:
+	Merupakan isi program utama untuk software SVO.
+	Seluruh fungsi pengambilan gambar hingga penentuan hasil odometry ditulis pada source file ini.
+
+cvbasic:
+	Adalah template yang dipakai untuk mengembangkan OpenCV dengan berbagai kemudahan.
+	Contohnya seperti source yang dipakai apakah kamera atau avi dan sebagainya.
+
+stereo:
+	Kode yang berisi fungsi StereoBM atau stereo correspondence pada program utama.
+
+desc:
+	Kode yang berisi pendeteksian objek dengan berbagai macam algoritma yang ada pada OpenCV.
+
+flow:
+	Kode yang berisi kode optical flow yang sudah digabung dalam satu fungsi, yang nantinya dipanggil oleh main
+
+odometry:
+	Kode yang berisi berbagai macam fungsi mulai dari pendeteksian fitur, filtrasi fitur, hingga triangulasi titik 2D->3D
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+widget_cv:
+	FLTK widget yang berisikan kode untuk menampilkan data cvMat (OpenCV data type) di dalam program FLTK
+
+widget_gl:
+	FLTK widget yang berisikan kode untuk menampilkan hasil akhir peta odometry yang berupa titik/garis 3D dengan OpenGL
+
+
+

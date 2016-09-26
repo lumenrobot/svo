@@ -1,0 +1,18 @@
+Untuk proses instalasi cukup sederhana:
+
+1. Extract file project software utama yang bernama:
+	svo.zip
+
+2. Copykan isi zip berupa folder program utama ke tempat yang diinginkan.
+   Rename folder program utama tersebut pun tidak masalah. Sesuaikan kebutuhan saja.
+
+3. Extract isi file berikut kedalam folder program utama:
+	runtime_mingw_x86_gcc510tdm.zip
+	runtime_opencv300_x86_gcc510tdm.zip
+
+NOTE:
+- Pastikan komputer anda mendukung USB camera ataupun multimedia support (*.avi)
+- Pastikan komputer anda (termasuk OS) sudah mendukung OpenGL 2.1 keatas
+- Software berhasil tested running pada OS sebagai berikut:
+	Windows XP SP3 (x86)
+	Windows 8 / 8.1 (x64)
